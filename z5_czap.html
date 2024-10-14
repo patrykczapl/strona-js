@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+     <meta charset="utf-8">
+     <title>Praca z oknami- Czaplewski</title>   
+    </head>
+    <body>
+        <script>
+            function WinOpen_z1()
+            {
+                window.open("grafika1_czap.html","okienko_z1","toolbar=no,directories=no,height=380,width=160,top=200,left=200,align=center");
+            }
+            function WinOpen_z2()
+            {
+                window.open("grafika2_czap.html","okienko_z2","toolbar=no,directories=no,height=380,width=160,top=200,left=200,align=left");
+            }
+            function WinOpen_z3()
+            {
+                window.open("grafika3_czap.html","okienko_z3","toolbar=no,directories=no,height=380,width=160,top=200,left=400");
+            }
+            function WinOpen_z4()
+            {
+                window.open("grafika4_czap.html","okienko_z4","toolbar=no,directories=no,height=380,width=160,top=200,left=400");
+            }
+            function okno_zamknij()
+            {
+                window.close()
+            }
+
+            document.write("wykonał: Patryk Czaplewski mój numer w dzienniku 4, czyli mam układ [(26) mod 4=2] układ 1".bold().fontsize(7).fontcolor("red")+"<br><br>")
+        </script>
+        <form>
+            <input type="button" value="grafika1" onclick="WinOpen_z1('')">
+            <input type="button" value="grafika2" onclick="WinOpen_z2('')">
+            <input type="button" value="grafika3" onclick="WinOpen_z3('')">
+            <input type="button" value="grafika4" onclick="WinOpen_z4('')">
+            <input type="button" value="zamknij okno" onclick="okno_zamknij()">
+        </form>
+
+    </body>
+    </html>
