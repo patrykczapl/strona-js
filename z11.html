@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Proste obliczenia</title>
+</head>
+<body>
+<div style="color:green;font-size:43px;">
+    <script language="JavaScript">
+        var d1_cza = prompt("D1=", "");
+        var d2_cza = prompt("D2=", "");
+        var d_sek;
+        var roz;
+
+        var a = parseFloat(d1_cza);
+        var b = parseFloat(d2_cza);
+
+        d_sek = 86400; 
+        roz = a - b;
+
+        document.write("ilość sekund=" + (roz * d_sek) + " sekund <br>");
+    </script>
+</div>
+</body>
+</html>
