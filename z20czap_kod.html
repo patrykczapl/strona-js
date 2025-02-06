@@ -1,0 +1,49 @@
+<textarea>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 20 - Obliczanie boków trójkąta</title>
+</head>
+<body>
+    <h2>Podaj współrzędne trzech punktów trójkąta</h2>
+    <label>A: </label> 
+    <input type="number" id="xa_cza" placeholder="xa">
+    <input type="number" id="ya_cza" placeholder="ya"><br>
+
+    <label>B: </label> 
+    <input type="number" id="xb_cza" placeholder="xb">
+    <input type="number" id="yb_cza" placeholder="yb"><br>
+
+    <label>C: </label> 
+    <input type="number" id="xc_cza" placeholder="xc">
+    <input type="number" id="yc_cza" placeholder="yc"><br>
+
+    <button onclick="obliczBoki()">Oblicz długości boków</button>
+
+    <h3>Wyniki:</h3>
+    <p id="wynik"></p>
+
+    <script>
+        function odleglosc(x1, y1, x2, y2) {
+            return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        }
+
+        function obliczBoki() {
+            let xa = parseFloat(document.getElementById('xa_cza').value);
+            let ya = parseFloat(document.getElementById('ya_cza').value);
+            let xb = parseFloat(document.getElementById('xb_cza').value);
+            let yb = parseFloat(document.getElementById('yb_cza').value);
+            let xc = parseFloat(document.getElementById('xc_cza').value);
+            let yc = parseFloat(document.getElementById('yc_cza').value);
+
+            let AB = odleglosc(xa, ya, xb, yb).toFixed(2);
+            let BC = odleglosc(xb, yb, xc, yc).toFixed(2);
+            let AC = odleglosc(xa, ya, xc, yc).toFixed(2);
+
+            document.getElementById('wynik').innerHTML = `Długości boków: <br> AB = ${AB} <br> BC = ${BC} <br> AC = ${AC}`;
+        }
+    </script>
+</body>
+</html>
+</textarea>
