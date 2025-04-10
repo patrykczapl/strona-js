@@ -1,0 +1,29 @@
+<script>
+  var samochod = {
+    marka: "Toyota",
+    kolor: "Czerwony",
+    rok: 2010,
+    pokaz: function() {
+      document.write("<p>Samochód: " + this.marka + ", " + this.kolor + ", " + this.rok + "</p>");
+    }
+  };
+  var telefon = {
+    marka: "Samsung",
+    typ: "Smartfon",
+    cena: 2000,
+    pokaz: function() {
+      document.write("<p>Telefon: " + this.marka + ", " + this.typ + ", " + this.cena + " zł</p>");
+    }
+  };
+  var dom = {
+    ulica: "Kwiatowa",
+    numer: 12,
+    miasto: "Poznań",
+    pokaz: function() {
+      document.write("<p>Dom: ul. " + this.ulica + " " + this.numer + ", " + this.miasto + "</p>");
+    }
+  };
+  samochod.pokaz();
+  telefon.pokaz();
+  dom.pokaz();
+</script>
