@@ -1,0 +1,18 @@
+<script>
+  var pudelko_cza = {
+    wysokosc: 10,
+    szerokosc: 5,
+    glebokosc: 2,
+    objetosc: function() {
+      return this.wysokosc * this.szerokosc * this.glebokosc;
+    },
+    pokaz: function() {
+      document.write("<h2>Dane pudełka:</h2>");
+      document.write("Wysokość: " + this.wysokosc + " cm<br>");
+      document.write("Szerokość: " + this.szerokosc + " cm<br>");
+      document.write("Głębokość: " + this.glebokosc + " cm<br>");
+      document.write("Objętość: " + this.objetosc() + " cm³");
+    }
+  };
+  pudelko_cza.pokaz();
+</script>
