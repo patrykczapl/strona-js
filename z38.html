@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
  </head>
  <body style="background-color:silver;"> 
- <div style="color:green; font-size:40px;"> 
+ <div> 
     <script language="JavaScript"> 
-        var imie = "Jan"; // Podaj swoje imię
-        var nazwisko = "Kowalski"; // Podaj swoje nazwisko
-        var dzien_urodzenia = 18; // Podaj dzień urodzenia
-        var numer_w_dzienniku = 5; // Podaj numer w dzienniku
+        var imie = prompt("Podaj swoje imię:", ""); 
+        var nazwisko = prompt("Podaj swoje nazwisko:", ""); 
+        var dzien_urodzenia = parseInt(prompt("Podaj dzień urodzenia:", "")); 
+        var numer_w_dzienniku = parseInt(prompt("Podaj numer w dzienniku:", ""));
 
         var liczba1 = imie.length;
         var liczba2 = liczba1 + 7;
@@ -28,19 +28,19 @@
         document.write("Liczba4: " + liczba4 + "<br>");
         document.write('</div>');
 
-        var opcja_kow = prompt("Podaj numer opcji:", "");
+        var opcja_kow = parseInt(prompt("Podaj numer opcji:", ""));
 
         if (opcja_kow == liczba1) {
             document.write('<div style="color:blue; font-size:4em;">Brawo, znasz teorię o operatorach logicznych</div>' + "<br>");
         } else if (opcja_kow == liczba3 + 20) {
-            var liczba_kow = prompt("Podaj liczbę:", "");
+            var liczba_kow = parseInt(prompt("Podaj liczbę:", ""));
             if (liczba_kow >= liczba1 && liczba_kow <= liczba2) {
                 document.write('<div style="color:blue; font-size:4em;">Liczba należy do przedziału (' + liczba1 + '; ' + liczba2 + ']</div>' + "<br>");
             } else {
                 document.write('<div style="color:red; font-size:7em;">Liczba nie należy do przedziału (' + liczba1 + '; ' + liczba2 + ']</div>' + "<br>");
             }
         } else if (opcja_kow == dzien_urodzenia + 50) {
-            var liczba2_kow = prompt("Podaj liczbę:", "");
+            var liczba2_kow = parseInt(prompt("Podaj liczbę:", ""));
             if (liczba2_kow < liczba1 || liczba2_kow >= liczba2) {
                 document.write('<div style="color:blue; font-size:4em;">Liczba należy do przedziału (-∞, ' + liczba1 + ') lub [' + liczba2 + ', ∞)</div>' + "<br>");
             } else {
