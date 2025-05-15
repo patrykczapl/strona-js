@@ -1,0 +1,93 @@
+<textarea>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 38</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: silver;
+        }
+        .data {
+            color: green;
+            font-size: 40px;
+        }
+        .menu {
+            color: red;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content"></div>
+    <button onclick="promptOption()">Wybierz opcję</button>
+
+    <script>
+        var imie = prompt("Podaj swoje imię:", ""); 
+        var nazwisko = prompt("Podaj swoje nazwisko:", ""); 
+        var dzien_urodzenia = parseInt(prompt("Podaj dzień urodzenia:", "")); 
+        var numer_w_dzienniku = parseInt(prompt("Podaj numer w dzienniku:", ""));
+
+        var liczba1 = imie.length;
+        var liczba2 = liczba1 + 7;
+        var liczba3 = nazwisko.length;
+        var liczba4 = liczba3 + 4;
+
+        var wielkosc = 40 + (numer_w_dzienniku % 7);
+
+        function displayContent(optionResult = "") {
+            var content = '<div class="data" style="font-size:' + wielkosc + 'px;">';
+            content += "Nazwisko: " + nazwisko + "<br>";
+            content += "Imię: " + imie + "<br>";
+            content += "Liczba1: " + liczba1 + "<br>";
+            content += "Liczba2: " + liczba2 + "<br>";
+            content += "Liczba3: " + liczba3 + "<br>";
+            content += "Liczba4: " + liczba4 + "<br>";
+            content += '</div>';
+
+            content += '<div class="menu" style="font-size:' + wielkosc + 'px;">';
+            content += "Menu:<br>";
+            content += "1. Liczba liter imienia (" + liczba1 + ") - teoria o operatorach logicznych<br>";
+            content += "2. Liczba liter nazwiska + 20 (" + (liczba3 + 20) + ") - sprawdzanie przedziału (od ; do]<br>";
+            content += "3. Dzień urodzenia + 50 (" + (dzien_urodzenia + 50) + ") - sprawdzanie przedziału (-∞, liczba1) lub [liczba2, ∞)<br>";
+            content += '</div>';
+
+            if (optionResult) {
+                content += '<div class="result" style="font-size:' + wielkosc + 'px;">' + optionResult + '</div>';
+            }
+
+            document.getElementById("content").innerHTML = content;
+        }
+
+        function promptOption() {
+            var opcja_kow = parseInt(prompt("Podaj numer opcji:", ""));
+            var result = "";
+
+            if (opcja_kow == liczba1) {
+                result = '<div style="color:blue; font-size:4em;">Brawo, znasz teorię o operatorach logicznych</div>';
+            } else if (opcja_kow == liczba3 + 20) {
+                var liczba_kow = parseInt(prompt("Podaj liczbę:", ""));
+                if (liczba_kow >= liczba1 && liczba_kow <= liczba2) {
+                    result = '<div style="color:blue; font-size:4em;">Liczba należy do przedziału (' + liczba1 + '; ' + liczba2 + ']</div>';
+                } else {
+                    result = '<div style="color:red; font-size:7em;">Liczba nie należy do przedziału (' + liczba1 + '; ' + liczba2 + ']</div>';
+                }
+            } else if (opcja_kow == dzien_urodzenia + 50) {
+                var liczba2_kow = parseInt(prompt("Podaj liczbę:", ""));
+                if (liczba2_kow < liczba1 || liczba2_kow >= liczba2) {
+                    result = '<div style="color:blue; font-size:4em;">Liczba należy do przedziału (-∞, ' + liczba1 + ') lub [' + liczba2 + ', ∞)</div>';
+                } else {
+                    result = '<div style="color:red; font-size:7em;">Liczba nie należy do przedziału (-∞, ' + liczba1 + ') lub [' + liczba2 + ', ∞)</div>';
+                }
+            } else {
+                result = '<div style="color:red; font-size:7em;">Nie ma takiej opcji</div>';
+            }
+
+            displayContent(result);
+        }
+
+        displayContent();
+    </script>
+</body>
+</html>
+</textarea>
