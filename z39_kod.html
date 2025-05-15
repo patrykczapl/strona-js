@@ -1,0 +1,50 @@
+<textarea>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 39</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: silver;
+        }
+        .menu {
+            color: green;
+            font-size: 40px;
+        }
+        .czerwony {
+            color: red;
+        }
+        .niebieski {
+            color: blue;
+        }
+        .result {
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        MENU:<br>
+        <span class="czerwony">1 - CZERWONY</span><br>
+        <span class="niebieski">2 - NIEBIESKI</span><br>
+    </div>
+    <button onclick="fun_kow()">Oblicz</button>
+    <div id="result"></div>
+
+    <script>
+        function fun_kow() {
+            var opcja_kow = prompt("Podaj kolor (numer lub tekst):", "").toLowerCase();
+            var resultDiv = document.getElementById("result");
+            if (opcja_kow == "1" || opcja_kow == "czerwony") {
+                resultDiv.innerHTML = '<h1 class="czerwony result">wczytałeś kolor czerwony</h1>';
+            } else if (opcja_kow == "2" || opcja_kow == "niebieski") {
+                resultDiv.innerHTML = '<h6 class="niebieski result">wczytałeś kolor niebieski</h6>';
+            } else {
+                resultDiv.innerHTML = '<h6 style="color:black;" class="result">Nieprawidłowy kolor</h6>';
+            }
+        }
+    </script>
+</body>
+</html>
+</textarea>
