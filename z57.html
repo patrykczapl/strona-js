@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Zadanie 57 - Cza</title></head>
+<body>
+<script>
+let n_cza = parseInt(prompt("Podaj liczbę n:"));
+document.write("<table border='1'><tr><th>i</th><th>i^2</th><th>&Sqrt;i</th></tr>");
+for(let i = 1; i <= n_cza; i++) {
+    document.write("<tr><td>" + i + "</td><td>" + (i*i) + "</td><td>" + Math.sqrt(i).toFixed(2) + "</td></tr>");
+}
+document.write("</table>");
+</script>
+</body>
+</html>
