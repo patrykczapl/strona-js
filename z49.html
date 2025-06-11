@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Zadanie 49 - Cza</title></head>
+<body>
+<script>
+let n_cza = parseInt(prompt("Podaj liczbę do obliczenia silni:"));
+let silnia_cza = 1;
+if(n_cza === 0) {
+    silnia_cza = 1;
+} else {
+    for(let i = 1; i <= n_cza; i++) {
+        silnia_cza *= i;
+    }
+}
+document.write(n_cza + "! = " + silnia_cza);
+</script>
+</body>
+</html>

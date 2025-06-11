@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Zadanie 53 - Cza</title></head>
+<body>
+<script>
+let a_cza = parseInt(prompt("Podaj wysokość:"));
+let b_cza = parseInt(prompt("Podaj szerokość:"));
+for(let i = 0; i < a_cza; i++) {
+    let wiersz = "";
+    for(let j = 0; j < b_cza; j++) {
+        if(i === 0 || i === a_cza-1 || j === 0 || j === b_cza-1) wiersz += "*";
+        else wiersz += "&nbsp;&nbsp;";
+    }
+    document.write(wiersz + "<br>");
+}
+</script>
+</body>
+</html>

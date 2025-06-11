@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Zadanie 54 - Cza</title></head>
+<body>
+<script>
+let a_cza = (6 % 4) + 5;
+let b_cza = (6 % 6) + 20;
+let linia = "";
+for(let i = 0; i < b_cza; i++) linia += "*";
+document.write(linia + "<br>");
+for(let i = 0; i < a_cza - 2; i++) {
+    document.write("*" + "&nbsp;".repeat(b_cza - 2) + "*<br>");
+}
+document.write(linia + "<br>");
+</script>
+</body>
+</html>

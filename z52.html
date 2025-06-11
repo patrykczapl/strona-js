@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Zadanie 52 - Cza</title></head>
+<body>
+<script>
+let a_cza = (6 % 4) + 5;
+let b_cza = (6 % 6) + 20;
+let wiersz = "";
+for(let i = 0; i < b_cza; i++) {
+    if(i === 0 || i === b_cza - 1) {
+        for(let j = 0; j < a_cza; j++) wiersz += "*";
+    } else {
+        wiersz += "*" + "&nbsp;".repeat(a_cza - 2) + "*";
+    }
+    document.write(wiersz + "<br>");
+    wiersz = "";
+}
+</script>
+</body>
+</html>
