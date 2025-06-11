@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Zadanie 46 - Cza</title></head>
+<body>
+<script>
+let a_cza, h_cza;
+do {
+  a_cza = parseFloat(prompt("Podaj podstawę (a > 0):"));
+} while (a_cza <= 0);
+do {
+  h_cza = parseFloat(prompt("Podaj wysokość (h > 0):"));
+} while (h_cza <= 0);
+let pole_cza = (a_cza * h_cza) / 2;
+document.write("Pole trójkąta: " + pole_cza);
+</script>
+</body>
+</html>

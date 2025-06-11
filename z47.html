@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Zadanie 47 - Cza</title></head>
+<body>
+<script>
+let a_cza, b_cza, c_cza;
+do {
+  a_cza = parseFloat(prompt("Podaj bok a:"));
+  b_cza = parseFloat(prompt("Podaj bok b:"));
+  c_cza = parseFloat(prompt("Podaj bok c:"));
+} while (!(a_cza + b_cza > c_cza && a_cza + c_cza > b_cza && b_cza + c_cza > a_cza));
+document.write("Boki tworzą trójkąt");
+</script>
+</body>
+</html>

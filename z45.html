@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Zadanie 45 - Cza</title></head>
+<body>
+<script>
+let liczba = parseInt(prompt("Podaj liczbę:"));
+let fontSize = (3 % 3) + 40;
+let text = (liczba % 2 === 0) ? "<span style='color:blue;'>Czajka</span>" : "<span style='color:green;'>Czarek</span>";
+for(let i = 0; i < ((3 % 4) + 10); i++) {
+    document.write("<span style='font-size:" + fontSize + "px;'>" + text + "</span><br>");
+}
+</script>
+</body>
+</html>

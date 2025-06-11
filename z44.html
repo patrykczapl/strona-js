@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Zadanie 44 - Cza</title></head>
+<body>
+<script>
+let fontSize = (3 % 3) + 40;
+let times = (3 % 4) + 10;
+for(let i = 1; i <= times; i++) {
+    let text = (i % 2 === 0) ? "Czarek" : "Czajka";
+    document.write("<span style='font-size:" + fontSize + "px;'>" + text + "</span><br>");
+}
+</script>
+</body>
+</html>
